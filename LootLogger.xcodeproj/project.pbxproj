@@ -15,6 +15,9 @@
 		7BFE78B826DA250F00FB77B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFE78B626DA250F00FB77B6 /* LaunchScreen.storyboard */; };
 		7BFE78C326DA250F00FB77B6 /* LootLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE78C226DA250F00FB77B6 /* LootLoggerTests.swift */; };
 		7BFE78CE26DA250F00FB77B6 /* LootLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE78CD26DA250F00FB77B6 /* LootLoggerUITests.swift */; };
+		7BFE78DC26DA260500FB77B6 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE78DB26DA260500FB77B6 /* ItemsViewController.swift */; };
+		7BFE78DE26DA26AA00FB77B6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE78DD26DA26AA00FB77B6 /* Item.swift */; };
+		7BFE78E026DA29FB00FB77B6 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE78DF26DA29FB00FB77B6 /* ItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		7BFE78C926DA250F00FB77B6 /* LootLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LootLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BFE78CD26DA250F00FB77B6 /* LootLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootLoggerUITests.swift; sourceTree = "<group>"; };
 		7BFE78CF26DA250F00FB77B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BFE78DB26DA260500FB77B6 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		7BFE78DD26DA26AA00FB77B6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		7BFE78DF26DA29FB00FB77B6 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +108,10 @@
 				7BFE78AB26DA250D00FB77B6 /* AppDelegate.swift */,
 				7BFE78AD26DA250D00FB77B6 /* SceneDelegate.swift */,
 				7BFE78AF26DA250D00FB77B6 /* ViewController.swift */,
+				7BFE78DB26DA260500FB77B6 /* ItemsViewController.swift */,
 				7BFE78B126DA250D00FB77B6 /* Main.storyboard */,
+				7BFE78DD26DA26AA00FB77B6 /* Item.swift */,
+				7BFE78DF26DA29FB00FB77B6 /* ItemStore.swift */,
 				7BFE78B426DA250F00FB77B6 /* Assets.xcassets */,
 				7BFE78B626DA250F00FB77B6 /* LaunchScreen.storyboard */,
 				7BFE78B926DA250F00FB77B6 /* Info.plist */,
@@ -258,7 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BFE78DE26DA26AA00FB77B6 /* Item.swift in Sources */,
 				7BFE78B026DA250D00FB77B6 /* ViewController.swift in Sources */,
+				7BFE78E026DA29FB00FB77B6 /* ItemStore.swift in Sources */,
+				7BFE78DC26DA260500FB77B6 /* ItemsViewController.swift in Sources */,
 				7BFE78AC26DA250D00FB77B6 /* AppDelegate.swift in Sources */,
 				7BFE78AE26DA250D00FB77B6 /* SceneDelegate.swift in Sources */,
 			);
