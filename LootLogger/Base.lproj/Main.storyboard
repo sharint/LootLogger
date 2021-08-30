@@ -45,29 +45,48 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="2re-OC-hYA" detailTextLabel="UKm-Ka-VYI" style="IBUITableViewCellStyleValue1" id="vyY-8i-tdX">
-                                <rect key="frame" x="0.0" y="68.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="ukL-24-h2T" customClass="ItemCell" customModule="LootLogger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68.5" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vyY-8i-tdX" id="d3q-Or-F5r">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ukL-24-h2T" id="xPj-gf-hD9">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2re-OC-hYA">
-                                            <rect key="frame" x="20" y="15" width="25" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiC-hQ-EvK">
+                                            <rect key="frame" x="20" y="40.5" width="28.5" height="13.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xss-Wg-enJ">
+                                            <rect key="frame" x="363" y="24" width="42" height="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UKm-Ka-VYI">
-                                            <rect key="frame" x="361" y="15" width="33" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu8-9h-tX4">
+                                            <rect key="frame" x="20" y="11" width="35.5" height="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="xss-Wg-enJ" firstAttribute="centerY" secondItem="xPj-gf-hD9" secondAttribute="centerY" id="6gG-UM-Pl7"/>
+                                        <constraint firstAttribute="trailing" secondItem="xss-Wg-enJ" secondAttribute="trailing" constant="9" id="Kdb-VC-7Mb"/>
+                                        <constraint firstItem="tiC-hQ-EvK" firstAttribute="top" secondItem="Gu8-9h-tX4" secondAttribute="bottom" constant="12.5" id="MEY-XS-yWm"/>
+                                        <constraint firstItem="tiC-hQ-EvK" firstAttribute="bottom" secondItem="xPj-gf-hD9" secondAttribute="bottomMargin" id="QVx-hc-sjJ"/>
+                                        <constraint firstItem="xss-Wg-enJ" firstAttribute="leading" secondItem="xPj-gf-hD9" secondAttribute="leading" constant="363" id="btT-F6-Psh"/>
+                                        <constraint firstItem="Gu8-9h-tX4" firstAttribute="top" secondItem="xPj-gf-hD9" secondAttribute="topMargin" id="eOp-WR-glG"/>
+                                        <constraint firstItem="Gu8-9h-tX4" firstAttribute="leading" secondItem="xPj-gf-hD9" secondAttribute="leadingMargin" id="o2E-Qa-w9E"/>
+                                        <constraint firstItem="tiC-hQ-EvK" firstAttribute="leading" secondItem="Gu8-9h-tX4" secondAttribute="leading" id="sPP-sg-s0j"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Gu8-9h-tX4" id="grA-lZ-ZdT"/>
+                                    <outlet property="serialNumberLabel" destination="tiC-hQ-EvK" id="IZX-Xc-uoZ"/>
+                                    <outlet property="valueInDollars" destination="xss-Wg-enJ" id="qya-hy-Hcq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -78,10 +97,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gof-ga-18c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196" y="76"/>
+            <point key="canvasLocation" x="-197.10144927536234" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
