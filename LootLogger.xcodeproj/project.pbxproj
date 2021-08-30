@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7BCE121D26DCE1D600933AD9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE121C26DCE1D600933AD9 /* ItemCell.swift */; };
+		7BCE121F26DD18A400933AD9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE121E26DD18A400933AD9 /* DetailViewController.swift */; };
 		7BFE78AC26DA250D00FB77B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE78AB26DA250D00FB77B6 /* AppDelegate.swift */; };
 		7BFE78AE26DA250D00FB77B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE78AD26DA250D00FB77B6 /* SceneDelegate.swift */; };
 		7BFE78B326DA250D00FB77B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFE78B126DA250D00FB77B6 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		7BCE121C26DCE1D600933AD9 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		7BCE121E26DD18A400933AD9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7BFE78A826DA250D00FB77B6 /* LootLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LootLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BFE78AB26DA250D00FB77B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BFE78AD26DA250D00FB77B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,8 +109,9 @@
 			children = (
 				7BFE78AB26DA250D00FB77B6 /* AppDelegate.swift */,
 				7BFE78AD26DA250D00FB77B6 /* SceneDelegate.swift */,
-				7BFE78DB26DA260500FB77B6 /* ItemsViewController.swift */,
 				7BFE78B126DA250D00FB77B6 /* Main.storyboard */,
+				7BFE78DB26DA260500FB77B6 /* ItemsViewController.swift */,
+				7BCE121E26DD18A400933AD9 /* DetailViewController.swift */,
 				7BCE121C26DCE1D600933AD9 /* ItemCell.swift */,
 				7BFE78DD26DA26AA00FB77B6 /* Item.swift */,
 				7BFE78DF26DA29FB00FB77B6 /* ItemStore.swift */,
@@ -273,6 +276,7 @@
 				7BFE78DC26DA260500FB77B6 /* ItemsViewController.swift in Sources */,
 				7BFE78AC26DA250D00FB77B6 /* AppDelegate.swift in Sources */,
 				7BFE78AE26DA250D00FB77B6 /* SceneDelegate.swift in Sources */,
+				7BCE121F26DD18A400933AD9 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

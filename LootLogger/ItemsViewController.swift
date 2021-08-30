@@ -11,31 +11,48 @@ class ItemsViewController: UITableViewController{
     
     var itemStore: ItemStore!
     
-    @IBAction func addNewItem(_ sender: UIButton){
+    @IBAction func addNewItem(_ sender: UIBarButtonItem){
         let newItem = itemStore.createItem()
-        
         if let index = itemStore.allItems.firstIndex(of: newItem){
             let indexPath = IndexPath(row: index, section: 0)
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showItem":
+            if let row = tableView.indexPathForSelectedRow?.row{
+                let item = itemStore.allItems[row]
+                let detailViewController = segue.destination as! DetailViewController
+                detailViewController.item = item
+            }
+        default:
+            preconditionFailure("Unexpected segue indetifier")
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.rowHeight = 65
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
     }
     
-    @IBAction func toggleEditingMode(_ sender: UIButton){
-        if isEditing{
-            sender.setTitle("Edit", for: .normal)
-            setEditing(false, animated: true)
-        } else {
-            sender.setTitle("Done", for: .normal)
-            setEditing(true, animated: true)
-        }
-        
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +66,13 @@ class ItemsViewController: UITableViewController{
         cell.nameLabel.text = item.name
         cell.serialNumberLabel.text = item.serialNumber
         cell.valueInDollars.text = "$\(item.valueInDollars)"
+        
+        if item.valueInDollars < 50{
+            cell.valueInDollars.textColor = .green
+        } else {
+            cell.valueInDollars.textColor = .red
+
+        }
         
         return cell
     }

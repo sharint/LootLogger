@@ -11,7 +11,7 @@ class Item: Equatable {
     var name: String
     var valueInDollars: Int
     var serialNumber : String?
-    let dateCreated : Data
+    let dateCreated : Date
     
     static func == (lhs: Item, rhs: Item) -> Bool{
         return lhs.name == rhs.name && lhs.serialNumber == rhs.serialNumber &&
@@ -22,12 +22,12 @@ class Item: Equatable {
         self.name = name
         self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
-        self.dateCreated = Data()
+        self.dateCreated = Date()
     }
     
     convenience init (random: Bool = false){
         if random{
-            let adjectives = ["Fluffy", "Rusty", "Shiny"]
+            let adjectives = ["Fluffy", "Rich", "Amazing"]
             let nouns = ["Bear", "Spork", "Mac"]
             
             let randomAdjective = adjectives.randomElement()!
@@ -36,7 +36,7 @@ class Item: Equatable {
             let randomName = "\(randomAdjective) \(randomNoun)"
             let randomValue = Int.random(in: 0...100)
             let randomSerialNumber = UUID().uuidString.components(separatedBy: "-").first!
-            
+            //let randomDateCreated = Date()
             self.init(name: randomName,serialNumber: randomSerialNumber, valueInDollars: randomValue)
         } else{
             self.init(name: "", serialNumber: nil, valueInDollars: 0)
