@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QTB-hT-O3x">
-                                <rect key="frame" x="10" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="717"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3x9-Oz-pRJ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
@@ -77,7 +77,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U78-1N-F9P">
-                                        <rect key="frame" x="0.0" y="126" width="414" height="648"/>
+                                        <rect key="frame" x="0.0" y="126" width="414" height="20.5"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -86,25 +86,49 @@
                                             <outletCollection property="gestureRecognizers" destination="6dA-EF-qqp" appends="YES" id="Fgg-V8-qW0"/>
                                         </connections>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Mje-fH-xoH">
+                                        <rect key="frame" x="0.0" y="154.5" width="414" height="524.5"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFU-93-lF4">
+                                        <rect key="frame" x="0.0" y="687" width="414" height="30"/>
+                                        <state key="normal" title="Change Date"/>
+                                        <connections>
+                                            <segue destination="26b-2L-dnZ" kind="show" identifier="changeDate" id="7d1-dE-wFU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="dmI-LV-LTl" firstAttribute="leading" secondItem="0vM-lZ-TiF" secondAttribute="leading" id="dMS-Jl-dtU"/>
                                     <constraint firstItem="0vM-lZ-TiF" firstAttribute="leading" secondItem="DIs-qg-wLp" secondAttribute="leading" id="dqh-kH-8Zx"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fN-RS-yG2">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="4Ki-AE-BuL">
+                                        <connections>
+                                            <action selector="choosePhotoSource:" destination="DLE-t9-41V" id="eRx-iM-yXX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CGu-LZ-qrR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QTB-hT-O3x" firstAttribute="bottom" secondItem="CGu-LZ-qrR" secondAttribute="bottom" id="12Y-6Y-GRw"/>
-                            <constraint firstItem="QTB-hT-O3x" firstAttribute="trailing" secondItem="CGu-LZ-qrR" secondAttribute="trailing" constant="10" id="IWC-fM-FeS"/>
+                            <constraint firstItem="CGu-LZ-qrR" firstAttribute="bottom" secondItem="9fN-RS-yG2" secondAttribute="bottom" id="5Um-qI-Vdu"/>
+                            <constraint firstItem="9fN-RS-yG2" firstAttribute="top" secondItem="QTB-hT-O3x" secondAttribute="bottom" constant="8" id="ISZ-gd-Fp9"/>
+                            <constraint firstAttribute="trailing" secondItem="9fN-RS-yG2" secondAttribute="trailing" id="Kuu-SN-ky8"/>
+                            <constraint firstItem="9fN-RS-yG2" firstAttribute="leading" secondItem="ytz-Ox-Ig2" secondAttribute="leading" id="Lxb-1E-qko"/>
+                            <constraint firstItem="QTB-hT-O3x" firstAttribute="leading" secondItem="CGu-LZ-qrR" secondAttribute="leading" id="NwB-C7-DBO"/>
+                            <constraint firstItem="QTB-hT-O3x" firstAttribute="trailing" secondItem="CGu-LZ-qrR" secondAttribute="trailing" id="R9P-ox-nst"/>
                             <constraint firstItem="QTB-hT-O3x" firstAttribute="top" secondItem="CGu-LZ-qrR" secondAttribute="top" id="elP-Nh-HF4"/>
-                            <constraint firstItem="QTB-hT-O3x" firstAttribute="leading" secondItem="CGu-LZ-qrR" secondAttribute="leading" constant="10" id="jCl-lQ-eCw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2xD-8N-amP"/>
                     <connections>
                         <outlet property="dateLabel" destination="U78-1N-F9P" id="xNs-gq-FKZ"/>
+                        <outlet property="imageView" destination="Mje-fH-xoH" id="L6W-aa-Olr"/>
                         <outlet property="nameField" destination="6bK-J2-jAk" id="Tff-I3-l7t"/>
                         <outlet property="serialNumberField" destination="hZR-lA-9BT" id="nGa-Ja-9Q9"/>
                         <outlet property="valueField" destination="AY3-hJ-6Gh" id="EtM-AQ-5qL"/>
@@ -117,7 +141,35 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1180" y="76"/>
+            <point key="canvasLocation" x="1300" y="76"/>
+        </scene>
+        <!--Date Change View Controller-->
+        <scene sceneID="9Bw-VX-fIT">
+            <objects>
+                <viewController id="26b-2L-dnZ" customClass="DateChangeViewController" customModule="LootLogger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o3C-0r-wgR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="OxB-ut-M7b">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mDG-M9-7Fj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OxB-ut-M7b" firstAttribute="centerX" secondItem="o3C-0r-wgR" secondAttribute="centerX" id="0QD-m8-ScL"/>
+                            <constraint firstItem="OxB-ut-M7b" firstAttribute="centerY" secondItem="o3C-0r-wgR" secondAttribute="centerY" id="e1m-wK-zkx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OVS-rA-j74"/>
+                    <connections>
+                        <outlet property="datePicker" destination="OxB-ut-M7b" id="Wz7-pi-GNE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1TB-ks-rph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2072" y="76"/>
         </scene>
         <!--LootLogger-->
         <scene sceneID="Pfc-7U-uaL">
