@@ -9,17 +9,32 @@ import UIKit
 
 class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
+    // MARK: - Variables
+    var item: Item!{
+        didSet{
+            navigationItem.title = item.name
+        }
+    }
+    
+    var imageStore : ImageStore!
+    
+    // MARK: - Outlets
     @IBOutlet var nameField: UITextField!
     @IBOutlet var serialNumberField: UITextField!
     @IBOutlet var valueField: UITextField!
     
     @IBOutlet var dateLabel: UILabel!
     
+    @IBOutlet var imageView: UIImageView!
+
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
     
-    @IBOutlet var imageView: UIImageView!
+    @IBAction func clearPhoto(_ sender: Any) {
+        imageView.image = nil
+        imageStore.deleteImage(forKey: item.itemKey)
+    }
     
     @IBAction func choosePhotoSource(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -50,7 +65,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         present(alertController, animated: true, completion: nil)
         
     }
-    
+    // MARK: - image
     func imagePicker(for sourceType: UIImagePickerController.SourceType) -> UIImagePickerController{
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = sourceType
@@ -67,7 +82,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         dismiss(animated: true, completion: nil)
     }
     
-    
+    // MARK: - Actions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "changeDate":
@@ -82,14 +97,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         }
     }
     
-    var item: Item!{
-        didSet{
-            navigationItem.title = item.name
-        }
-    }
+
     
-    var imageStore : ImageStore!
-    
+    // MARK: - Formatters
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
@@ -110,7 +120,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         return true
     }
     
-    
+    // MARK: - View lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         valueField.keyboardType = .decimalPad
