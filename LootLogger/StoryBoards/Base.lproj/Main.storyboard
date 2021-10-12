@@ -207,13 +207,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiC-hQ-EvK">
-                                            <rect key="frame" x="20" y="40" width="28.5" height="14"/>
+                                            <rect key="frame" x="20" y="40" width="384" height="14"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xss-Wg-enJ">
-                                            <rect key="frame" x="0.0" y="24" width="404" height="17"/>
+                                            <rect key="frame" x="0.0" y="24" width="394" height="17"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -228,11 +228,11 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="Gu8-9h-tX4" secondAttribute="trailing" constant="10" id="6Vd-Aw-F6q"/>
                                         <constraint firstItem="xss-Wg-enJ" firstAttribute="centerY" secondItem="xPj-gf-hD9" secondAttribute="centerY" id="6gG-UM-Pl7"/>
-                                        <constraint firstAttribute="trailing" secondItem="xss-Wg-enJ" secondAttribute="trailing" constant="10" id="Kdb-VC-7Mb"/>
+                                        <constraint firstAttribute="trailing" secondItem="xss-Wg-enJ" secondAttribute="trailing" constant="20" id="Kdb-VC-7Mb"/>
                                         <constraint firstItem="tiC-hQ-EvK" firstAttribute="bottom" secondItem="xPj-gf-hD9" secondAttribute="bottomMargin" id="QVx-hc-sjJ"/>
                                         <constraint firstItem="Gu8-9h-tX4" firstAttribute="leading" secondItem="xPj-gf-hD9" secondAttribute="leadingMargin" id="RJj-xD-C0d"/>
                                         <constraint firstItem="Gu8-9h-tX4" firstAttribute="leading" secondItem="tiC-hQ-EvK" secondAttribute="leading" id="TJO-Pu-5ii"/>
-                                        <constraint firstAttribute="trailing" secondItem="tiC-hQ-EvK" secondAttribute="trailing" constant="365.5" id="XGp-nQ-wwm"/>
+                                        <constraint firstAttribute="trailing" secondItem="tiC-hQ-EvK" secondAttribute="trailing" constant="10" id="XGp-nQ-wwm"/>
                                         <constraint firstItem="xss-Wg-enJ" firstAttribute="leading" secondItem="xPj-gf-hD9" secondAttribute="leading" id="btT-F6-Psh"/>
                                         <constraint firstItem="Gu8-9h-tX4" firstAttribute="top" secondItem="xPj-gf-hD9" secondAttribute="topMargin" constant="-1" id="eZ3-qQ-1OP"/>
                                         <constraint firstItem="tiC-hQ-EvK" firstAttribute="top" secondItem="Gu8-9h-tX4" secondAttribute="bottom" constant="13" id="f4f-DP-YPM"/>
